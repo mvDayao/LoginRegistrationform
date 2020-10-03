@@ -1,0 +1,79 @@
+body {
+  background-color:#CCCCFF;
+   font-family: 'Roboto';
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  width: 25%;
+  justify-content: center;
+}
+.button2 {background-color: #008CBA;}
+.button3 {background-color: #f44336;}
+.button4 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  width: 50%;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+.login-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  width: 25%;
+}
+h1
+{
+  font-size: 50px;
+}
+.login-container input[type=text],
+.login-container input[type=password],
+.login-container input[type=date],
+select
+{
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  height: 30px;
+}
+.login-container input[type=text]::placeholder,
+.login-container input[type=password]::placeholder,
+.login-container input[type=date]::placeholder,
+select>option
+{
+  text-align: center;
+}
