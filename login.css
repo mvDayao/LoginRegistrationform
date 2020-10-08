@@ -1,39 +1,221 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+  box-sizing: border-box;
+}
+
+
 body {
-  background-color:#CCCCFF;
-   font-family: 'Roboto';
+  background-color:#ADEFD1FF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-direction: column;
+   font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+	margin: -20px 0 50px;
 }
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-bottom: 4px;
-  cursor: pointer;
-  width: 25%;
-  justify-content: center;
+h2 {
+	font-weight: bold;
+	margin: 0;
+    position: absolute;
+    left: 500px;
+    top: 10%;
+    
 }
-.button2 {background-color: #008CBA;}
-.button3 {background-color: #f44336;}
-.button4 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+h10{
+    font-weight: normal;
+    font-family:'Montserrat', sans-serif; 
+    font-size: 14px;
+}
+.textbox {
+    position: absolute;
+    width: 500px;
+    left: 400px;
+    top: 23%;
+}
+.textboxfirst {
+    position: absolute;
+    width: 350px;
+    top: 34%;
+    left: 423px;
+}
+.textboxinitial{
+    position: absolute;
+    width: 435px;
+    left: 740px;
+    top: 34%;
+    left: 560px;
+}
+.textboxnum {
+    position: absolute;
+    width: 500px;
+    left: 401px;
+    top: 45%;
+}
+.drop{
+    position: absolute;
+    width: 245px;
+    top: 57%;
+    left: 415px;
+}
+#level{
+    box-sizing: border-box;
+    border: 3px 0;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+.bday{
+    position: absolute;
+    width: 400px;
+    top: 56%;
+    left: 520px;
+}
+.mobile{
+    position: absolute;
+    width: 500px;
+    top: 67%;
+    left: 401px;
+    
+}
+.emailadd{
+    position: absolute;
+    width: 500px;
+    top: 77%;
+    left: 401px;
+}
+.usern{
+    position: absolute;
+    width: 500px;
+    top: 87%;
+    left: 401px;
+}
+.pass{
+    position: absolute;
+    width: 500px;
+    top: 97%;
+    left: 401px;
+}
+.passtwo{
+    position: absolute;
+    width: 500px;
+    top: 107%;
+    left: 401px;
+}
+.agree{
+    position: absolute;
+    top: 117%;
+    left: 500px;
+}
+    
+
+.label {
   font-size: 16px;
-  margin-bottom: 4px;
-  cursor: pointer;
+  color: #555;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 5px;
+   vertical-align: top;
+}
+
+
+input[type=text] {
+  width: 70%;
+  padding: 8px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+input[type=texti] {
+  width: 20%;
+  padding: 8px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+input[type=tel] {
+  width: 70%;
+  padding: 8px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+input[type=email] {
+  width: 70%;
+  padding: 8px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+input[type=date] {
+  width: 20%;
+  padding: 8px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+input[type="checkbox"]{
+  width: 20px; 
+  height: 20px; 
+ margin-top: 5%;
+    margin-bottom: 5%;
+  
+}
+input[type="submit"]   {
+    position: absolute;
+    top:123%;
+    left: 465px;
+    width: 25%;
+    height: 6%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    background-color: aliceblue;
+    color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+#psw{
+  width: 70%;
+  padding: 15px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+#psw-repeat{
+  width: 70%;
+  padding: 15px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;  
+}
+#bdate{
   width: 50%;
-  justify-content: center;
-  margin-top: 20px;
-  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 8px;
 }
+
+
+
 .container
 {
   display: flex;
@@ -55,12 +237,19 @@ body {
   margin-right: auto;
   margin-left: auto;
   width: 25%;
+    text-align: center;
 }
 h1
 {
   font-size: 50px;
 }
-.login-container input[type=text],
+input[type=text]::placeholder {
+    text-align: left;
+}
+input[type=tel]::placeholder{
+    text-align: left;
+}
+
 .login-container input[type=password],
 .login-container input[type=date],
 select
@@ -70,10 +259,35 @@ select
   border-radius: 5px;
   height: 30px;
 }
-.login-container input[type=text]::placeholder,
-.login-container input[type=password]::placeholder,
+
+
 .login-container input[type=date]::placeholder,
 select>option
 {
   text-align: center;
 }
+.contain{
+    background-color: white;
+    width: 600px;
+    margin-top: 250px;
+    height: 900px;
+    margin-right: 12%;
+    border-radius: 8px;
+}
+.containtt{
+    background-color: white;
+    background-position: center;
+    width: 600px;
+    margin-top: 500px;
+    height: 600px;
+    border-radius: 8px;
+    
+}
+h6{
+  margin-top: 105%; 
+    font-size: 12px;
+}
+
+
+
+

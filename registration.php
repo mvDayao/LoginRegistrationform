@@ -8,16 +8,49 @@ require_once('config.php');
   <link rel="stylesheet" href="login.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src ="regis.js"></script>
     <title>REGISTRATION FORM</title>
 </head>
 
-<body onload="document.registration.lname.focus();"> <!--JAVASCRIPT-->
+<body> <!--JAVASCRIPT-->
+    <div>
+        <?php
+    if(isset($_POST['create'])){
+    $lname = $_POST['lname'];
+    $fname = $_POST['fname'];
+    $mid   = $_POST['mid'];
+    $stud  = $_POST['stud'];
+    $level = $_POST['level'];
+    $bdate = $_POST['bdate'];
+    $mnum  = $_POST['mnum'];
+    $email = $_POST['email'];
+    $user  = $_POST['user'];
+    $psw = sha1($_POST['psw']);
     
+    
+    
+    $sql = "INSERT INTO register (LastName, FirstName, Initial, StudentNo, Year, Birthdate, Mobile, Email, Username, Password) VALUES(?,?,?,?,?,?,?,?,?,?)";
+    $stminsert = $db->prepare($sql);
+    $result = $stminsert->execute([$lname, $fname, $mid, $stud, $level, $bdate, $mnum, $email, $user, $psw]);
+    if($result){
+        echo 'Succesfully Saved';
+        
+    }else{
+        echo 'There were errors while saving this';
+    }
+}else{
+    echo 'No data';
+}
+
+?>
+
+    
+    
+    
+    </div>
     <div class="contain">
         <div class="containtt">
   <div class="login-container">
-      <form id="container" action="signup.php" method="POST">
+      <form class="" action="process.php" method="POST">
       <center>
         
         <h2>ACCOUNT REGISTRATION</h2> 
@@ -27,27 +60,27 @@ require_once('config.php');
         <br>
     <div class="textbox">
         <i class="fas fa-user"></i>
-        <label for="lastName">Last Name :</label>
+        <label for="lname">Last Name :</label>
         <br>
         <input type="text" placeholder="Last Name" id="lname" name="lname" required>
 </div></center>
 
 <div class="textboxfirst">
     <i class="fas fa-user"></i>
-   <label for="firstName">First Name :</label><br>
+   <label for="fname">First Name :</label><br>
  <input type="text" placeholder="First Name" id="fname" name="fname" required> 
     </div>
 
     <div class="textboxinitial">
         <i class="fas fa-user"></i>
-        <label for="midI">M.I :</label>
+        <label for="mid">M.I :</label>
         <br>
         <input type="texti" placeholder="M.I" id="mid" name="mid">
     </div>
       
       <div class="textboxnum">
       <i class="fas fa-address-card"></i>
-          <label for="studentNum">Student Number :</label>
+          <label for="stud">Student Number :</label>
           <br>
           <input type="tel" placeholder="Student Number"id="stud" name="stud" required>
       </div>
@@ -69,14 +102,14 @@ require_once('config.php');
       
       <div class="bday">
          <i class="fas fa-calendar-alt"></i>
-          <label for="birthday">Birth Date :</label>
+          <label for="bdate">Birth Date :</label>
           <br>
           <input type="date" id="bdate" name="bdate" max="2002-10-01" required>
       </div>
       
       <div class="mobile">
       <i class="fas fa-phone"></i>
-          <label for="mobilenum">Mobile Number :</label>
+          <label for="mnum">Mobile Number :</label>
           <br>
           <input type="tel"  placeholder="Mobile Number" id="mnum" name="mnum" required>
       
@@ -91,7 +124,7 @@ require_once('config.php');
       
       <div class="usern">
       <i class="fas fa-user"></i>
-          <label for="uname">Username :</label>
+          <label for="user">Username :</label>
           <br>
           <input type="text" placeholder="Username" id="user" name="user" required>
       </div>
@@ -120,7 +153,7 @@ require_once('config.php');
          
       </div></center> 
       <div class="button">
-     <input type="submit" id="signupbtn" name="signupbtn" value="REGISTER"></div>     
+     <input type="submit" id="create" name="create" value="REGISTER"></div>     
 <h6> Already a member?<a href="login.html">.Just Sign In</a></h6>
 
     
@@ -148,62 +181,6 @@ require_once('config.php');
             }
             
         }
-    </script>
-    
-    <script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script type="text/javascript">
-        $(function(){
-            $('#signupbtn').click(function(e){
-                
-                var valid = this.form.checkValidity();
-                
-                
-                if(valid){
-                    
-               var lname = $('#lname').val();
-               var fname = $('#fname').val();
-               var mid   = $('#mid').val();
-               var stud  = $('#stud').val();
-               var level = $('#level').val();
-               var bdate = $('#bdate').val();
-               var mnum  = $('#mnum').val();
-               var email = $('email').val();
-               var user  = $('#user').val();
-               var psw = $('psw').val();
-                
-                    e.preventDefault();
-                    
-                    
-                    $.ajax({
-                        type: 'POST',
-                        url: 'process.php',
-                        data: {lname: lname,fname: fname,mid: mid,stud: stud,level: level,bdate: bdate,mnum: mnum,email: email,user: user,psw: psw},
-                        success: function(data){
-                        Swal.fire({
-                                'title' : 'Successful',
-                                'text' : data ,
-                                'type' : 'success' 
-                                })
-                        },
-                         error: function(data){
-                             Swal.fire({
-                                'title' : 'Errors',
-                                'text' : 'THIS is error',
-                                'type' : 'error' 
-                             })
-                        }
-                    
-                           
-                    });
-                }else{
-                    
-                }
-            
-                                   
-            });
-        });
     </script>
     
 </body>
