@@ -49,6 +49,23 @@ h10{
     top: 34%;
     left: 560px;
 }
+.eye{
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    
+}
+#hide1{
+    display: none;
+}
+.eye2{
+    position: absolute;
+    left: 80%;
+    top: 50%;
+}
+#hide3{
+    display: none;
+}
 .textboxnum {
     position: absolute;
     width: 500px;
@@ -196,6 +213,7 @@ input[type="submit"]:hover{
   box-sizing: border-box;
   border: 3px solid black;
   border-radius: 8px;
+  height: 30px;
 }
 #psw-repeat{
   width: 70%;
@@ -204,6 +222,7 @@ input[type="submit"]:hover{
   box-sizing: border-box;
   border: 3px solid black;
   border-radius: 8px;  
+    height: 30px;
 }
 #bdate{
   width: 50%;

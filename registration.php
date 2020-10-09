@@ -12,41 +12,7 @@ require_once('config.php');
 </head>
 
 <body> <!--JAVASCRIPT-->
-    <div>
-        <?php
-    if(isset($_POST['create'])){
-    $lname = $_POST['lname'];
-    $fname = $_POST['fname'];
-    $mid   = $_POST['mid'];
-    $stud  = $_POST['stud'];
-    $level = $_POST['level'];
-    $bdate = $_POST['bdate'];
-    $mnum  = $_POST['mnum'];
-    $email = $_POST['email'];
-    $user  = $_POST['user'];
-    $psw = sha1($_POST['psw']);
-    
-    
-    
-    $sql = "INSERT INTO register (LastName, FirstName, Initial, StudentNo, Year, Birthdate, Mobile, Email, Username, Password) VALUES(?,?,?,?,?,?,?,?,?,?)";
-    $stminsert = $db->prepare($sql);
-    $result = $stminsert->execute([$lname, $fname, $mid, $stud, $level, $bdate, $mnum, $email, $user, $psw]);
-    if($result){
-        echo 'Succesfully Saved';
-        
-    }else{
-        echo 'There were errors while saving this';
-    }
-}else{
-    echo 'No data';
-}
 
-?>
-
-    
-    
-    
-    </div>
     <div class="contain">
         <div class="containtt">
   <div class="login-container">
@@ -131,9 +97,13 @@ require_once('config.php');
       
       <div class="pass">
       <i class="fas fa-lock"></i>
-          <label for="psw">Password :</label>
+          <label for="psw">Password:</label>
           <br>
           <input type="password" placeholder="Password" id="psw" name="psw" required>
+          <span class="eye" onclick="myFunction()">
+          <i id="hide1" class="fas fa-eye"></i>
+          <i id="hide2" class="fas fa-eye-slash"></i>
+              </span>
       </div>
       
       <div class="passtwo">
@@ -141,6 +111,10 @@ require_once('config.php');
       <label for="psw-repeat">Confirm Password :</label>
       <br>
       <input type="password" placeholder="Confirm Password" id="psw-repeat" name="psw-repeat" minlength="8" maxlength="20" required>
+          <span class="eye2" onclick="myFunction1()" >
+             <i id="hide3" class="fas fa-eye"></i>
+             <i id="hide4" class="fas fa-eye-slash"></i>
+          </span>
       </div>
       <br>
       <br>
@@ -168,20 +142,34 @@ require_once('config.php');
             var y = document.getElementById("hide1");
             var z = document.getElementById("hide2");
             
-            if(x.type === "password"){
+            if(x.type === 'password'){
                 x.type = "text";
                 y.style.display = "block";
                 z.style.display = "none";
-                
-            }
-            else{
-                x.type = 'password';
+            }else{
+                x.type = "password";
                 y.style.display = "none";
-                z.style.display = "block"; 
+                z.style.display = "block";
             }
+        }
+        
+        function myFunction1(){
+            var x = document.getElementById("psw-repeat");
+            var y = document.getElementById("hide3");
+            var z = document.getElementById("hide4");
             
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
         }
     </script>
+    
     
 </body>
 </html>
