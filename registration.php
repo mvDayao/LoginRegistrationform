@@ -75,7 +75,7 @@ require_once('config.php');
         <i class="fas fa-user"></i>
         <label for="mid">M.I :</label>
         <br>
-        <input type="texti" placeholder="M.I" id="mid" name="mid">
+        <input type="texti" placeholder="M.I" id="mid" name="mid" maxlength="2">
     </div>
       
       <div class="textboxnum">
@@ -126,7 +126,7 @@ require_once('config.php');
       <i class="fas fa-user"></i>
           <label for="user">Username :</label>
           <br>
-          <input type="text" placeholder="Username" id="user" name="user" required>
+          <input type="text" placeholder="Username" id="user" name="user" minlength="8" maxlength="15" required>
       </div>
       
       <div class="pass">
@@ -140,7 +140,7 @@ require_once('config.php');
       <i class="fas fa-lock"></i>
       <label for="psw-repeat">Confirm Password :</label>
       <br>
-      <input type="password" placeholder="Confirm Password" id="psw-repeat" name="psw-repeat" required>
+      <input type="password" placeholder="Confirm Password" id="psw-repeat" name="psw-repeat" minlength="8" maxlength="20" required>
       </div>
       <br>
       <br>
