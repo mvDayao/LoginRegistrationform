@@ -82,7 +82,7 @@ require_once('config.php');
       <i class="fas fa-address-card"></i>
           <label for="stud">Student Number :</label>
           <br>
-          <input type="tel" placeholder="Student Number"id="stud" name="stud" required>
+          <input type="tel" placeholder="Student Number"id="stud" name="stud" minglength="11" maxlength="11" required>
       </div>
       
       <div class="drop">
