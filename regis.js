@@ -42,7 +42,29 @@ function checkletters(a,b,c)
 	}
 }
 
-functions checkAN(a)
+function checkAN(a)
 {
 	var an = /^[a-zA-Z0-9]+$/;
-	
+	if (a.value.match(an))
+	{
+		return true;
+	}
+	else
+	{
+		alert('Password must be alphanumeric.');
+		return false;
+	}	
+}
+
+function checke(a)
+{
+	var e = ([A-Z]*[a-z]*[0-9]*\.*)+ue.edu.ph;
+	if (a.value.match(e))
+	{
+		return true;
+	}
+	else
+	{
+		alert('must be a valid UE email address.');
+		return false;
+	}
