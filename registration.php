@@ -16,7 +16,7 @@ require_once('config.php');
     <div class="contain">
         <div class="containtt">
   <div class="login-container">
-      <form class="" action="process.php" method="POST">
+      <form name="registration"  action="process.php" method="POST">
       <center>
         
         <h2>ACCOUNT REGISTRATION</h2> 
@@ -48,7 +48,7 @@ require_once('config.php');
       <i class="fas fa-address-card"></i>
           <label for="stud">Student Number :</label>
           <br>
-          <input type="tel" placeholder="Student Number"id="stud" name="stud" minglength="11" maxlength="11" required>
+          <input type="number" placeholder="Student Number"id="stud" name="stud" minlength="11" maxlength="11" required>
       </div>
       
       <div class="drop">
@@ -77,7 +77,7 @@ require_once('config.php');
       <i class="fas fa-phone"></i>
           <label for="mnum">Mobile Number :</label>
           <br>
-          <input type="tel"  placeholder="Mobile Number" id="mnum" name="mnum" required>
+          <input type="tel"  placeholder="Mobile Number" id="mnum" name="mnum" minlength="10" maxlength="10" required>
       
       </div>
  
@@ -127,7 +127,7 @@ require_once('config.php');
          
       </div></center> 
       <div class="button">
-     <input type="submit" id="create" name="create" value="REGISTER"></div>     
+     <input type="submit" id="create" name="create" value="REGISTER" onclick="checkletters(document.registration.fname,document.registration.lname,document.registration.mid)""></div>     
 <h6> Already a member?<a href="login.html">.Just Sign In</a></h6>
 
     

@@ -1,4 +1,4 @@
-function ValidateAll() {
+/*function ValidateAll() {
     'use strict'; 
     
 }
@@ -26,4 +26,23 @@ function myFunction() {
 }
 if (myFunction) {
     document.form.submit();
+}*/
+
+function checkletters(a,b,c)
+{
+	var letters = /^[A-Za-z]+$/;
+	if (a.value.match(letters) && b.value.match(letters) && c.value.match(letters))
+	{
+		return true;
+	}
+	else
+	{
+		alert('First name, last name, and middle initial should be letters.');
+		return false;
+	}
 }
+
+functions checkAN(a)
+{
+	var an = /^[a-zA-Z0-9]+$/;
+	
