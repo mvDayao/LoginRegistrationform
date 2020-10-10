@@ -66,7 +66,7 @@ session_start();
                     <br>
                     
                     <div class="button">
-                        <a href="register.php">
+                        <a href="registration.php">
                  <button> SIGN UP</button></a>
                 </div>
                 </div>

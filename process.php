@@ -15,13 +15,13 @@ if(isset($_POST['create'])){
     $user  = $_POST['user'];
     $psw = sha1($_POST['psw']);
     
-    
-    
+ 
+        
     $sql = "INSERT INTO register (lname, fname, mid, stud, level, bdate, mnum, email, user, psw) VALUES(?,?,?,?,?,?,?,?,?,?)";
     $stminsert = $db->prepare($sql);
-    $result = $stminsert->execute([$lname, $fname, $mid, $stud, $level, $bdate, $mnum, $email, $user, $psw]);
-    if($result){
-        echo 'Succesfully Saved';
+    $result = $stminsert->execute([$lname, $fname, $mid, $stud, $level, $bdate, $mnum, $email, $user, $psw]);   
+   if($result){
+        header("location:success.php");
         
     }else{
         echo 'There were errors while saving this';

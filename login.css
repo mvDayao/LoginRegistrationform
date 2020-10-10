@@ -154,7 +154,15 @@ input[type=texti] {
   border: 3px solid black;
   border-radius: 8px;
 }
-input[type=tel] {
+input[type=tel]{
+    width: 70%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+input[type=number] {
   width: 70%;
   padding: 8px 20px;
   margin: 3px 0;
@@ -314,3 +322,4 @@ input::-webkit-inner-spin-button {
 input[type=number] {
  -moz-appearance: textfield;
 }
+
