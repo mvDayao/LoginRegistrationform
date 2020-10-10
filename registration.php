@@ -10,7 +10,7 @@ require_once('config.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>REGISTRATION FORM</title>
 </head>
-
+<script src="regis.js"></script>
 <body> <!--JAVASCRIPT-->
 
     <div class="contain">
