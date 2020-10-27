@@ -1,0 +1,94 @@
+<?php
+require_once('config.php');
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="regcss.css">
+<script src="validation.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container">
+	<div class="header">
+        <h2><center>ACCOUNT REGISTRATION</center></h2>
+    
+	</div>
+	<form id="reg-form" class="form" onsubmit="checkforblank()">
+		<div class="form-control">
+			<label for="username">Last Name :</label>
+			<input type="text" placeholder="Last Name" id="lname" name="lname" />
+             <div id="lname_error"></div>
+		
+		
+			<label for="username">First Name :</label>
+			<input type="text" placeholder="First Name" id="fname" name="fname" />
+             <div id="fname_error"></div>
+			
+		
+        
+			<label for="username">M.I :</label>
+			<input type="text" placeholder="M.I" id="mid" name="mid" />
+            <div id="mid_error"></div>
+			
+            <label for="username">Student Number :</label>
+            <input type="tel" placeholder="Student Number" id="stud" name="stud" />
+             <div id="stud_error"></div>
+           
+		  
+            <label for="year" >Year Level :</label>
+          <br>
+            <select id="level" name="level">
+            <option value=" ">Year Level</option>    
+            <option value="1">1st Year</option>    
+            <option value="2">2nd Year</option>    
+            <option value="3">3rd year</option>    
+            <option value="4">4th Year</option>    
+            <option value="5">5th Year</option>   
+            <option value="6">5 Year Up</option>    
+            </select>
+        
+          <label for="bdate">Birth Date :</label>
+          <br>
+          <input type="date" id="bdate" name="bdate" max="2002-10-01"  />
+             <div id="bdate_error"></div>
+            <br>
+            
+            <label for="username">Mobile Number :</label>
+            <select id="mob" name="mob">
+            <option>+63 </option>
+            </select>
+            <input type="tel" placeholder="Mobile Number" id="mob" name="mob" />
+             <div id="mob_error"></div>
+			
+        </div>
+        <div class="form-control">
+            <label for="email">UE Email Address :</label>
+            <input type="email" placeholder="UE Email Address" id="email" name="email"/>
+             <div id="email_error"></div>
+            
+            <label for="user">Username :</label>
+            <input type="text" placeholder="Username" id="user" name="user" />
+             <div id="user_error"></div>
+         
+            
+            <label for="psw">Password :</label>
+            <input type="password" placeholder="Password" id="psw" name="psw" />
+          
+            
+            <label for="pswrepeat">Confirm Password :</label>
+            <input type="password" placeholder="Confirm Password" id="pswrepeat" name="pswrepeat" />
+             <div id="psw_error"></div>
+          
+            
+            <input type="checkbox" id="check" name="check" ><h4>&nbsp &nbsp &nbsp Terms and Conditions </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+		<button onclick="return validate()">REGISTER</button>
+        </div>
+	</form>
+</div>
+    
